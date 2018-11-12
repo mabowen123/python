@@ -49,9 +49,13 @@ def randomCode():
 # 定义代码精灵类
 class Code(pygame.sprite.Sprite):
     def __init__(self):
+        """初始化硬件"""
         pygame.sprite.Sprite.__init__(self)
+        # 加载字体 随机字符串大小
         self.font = pygame.font.Font('font.ttf', randomSize())
+        # 加载随机速度
         self.speed = randomSpeed()
+        # 生成随机长度字符串
         self.code = self.getCode()
         self.image = self.font.render(self.code, True, randomColor())
         self.image = pygame.transform.rotate(self.image, random.randint(87, 93))

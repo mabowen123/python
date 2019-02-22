@@ -3,18 +3,20 @@
 # @Author :mabowen
 # @Time   :2018/8/15 19:56
 import itchat, time
+
 """
 检测微信单删
 """
 # 登陆
-itchat.auto_login()
+a = itchat.auto_login()
+print(a)
 # 获取好友列表
 friendList = itchat.get_friends(update=True)[1:]
 num = [0, 1]
 
 
 def send(g, num):
-    itchat.send('ॣ ॣ ॣ', friendList[g + num]['UserName'])
+    itchat.send('జ్ఞ ా', friendList[g + num]['UserName'])
     print((friendList[g + num]['RemarkName'] or friendList[g + num]['NickName']), '已发送')
 
 

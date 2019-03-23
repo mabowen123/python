@@ -5,7 +5,6 @@ import os
 import re
 import requests
 import datetime
-import threading
 
 q = input("抓取商品得关键字")
 info = {}

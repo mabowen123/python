@@ -24,7 +24,7 @@ def threads(t_group):
     return thread
 
 
-t_group = ["470007", "001630", "001938", "161725", "000961", "001163", "502010"]
+t_group = ["470007","161032","001052","001630","001938", "161725", "000961", "001163"]
 while True:
     os.system('cls')
     for t in threads(t_group):
@@ -32,3 +32,4 @@ while True:
         t.join()
 
     time.sleep(20)
+
